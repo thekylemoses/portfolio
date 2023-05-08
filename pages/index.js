@@ -13,9 +13,9 @@ const HomePage = () => {
         <div className="logo">My Portfolio</div>
         <nav>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/about">About</a></li>
+            <li><a href="/pages/index.js">Home</a></li>
+            <li><a href="/pages/about.html">About</a></li>
+            <li><a href="/pages/projects.html">Projects</a></li>
           </ul>
         </nav>
       </header>
