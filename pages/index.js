@@ -6,15 +6,40 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Next.js Starter!</title>
+        <title>My Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Header title="My Portfolio" />
+
       <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+        <section className="hero">
+          <h1>Hi, I'm [Your Name]</h1>
+          <p>I'm a computer science major and software developer. Here are some of my projects:</p>
+        </section>
+
+        <section className="projects">
+          <div className="project">
+            <h2>Project 1</h2>
+            <p>Description of project 1</p>
+            <a href="#">View project</a>
+          </div>
+          <div className="project">
+            <h2>Project 2</h2>
+            <p>Description of project 2</p>
+            <a href="#">View project</a>
+          </div>
+          <div className="project">
+            <h2>Project 3</h2>
+            <p>Description of project 3</p>
+            <a href="#">View project</a>
+          </div>
+        </section>
+
+        <section className="about">
+          <h2>About Me</h2>
+          <p>I'm a computer science major at [Your University], and I'm passionate about software development and technology. In my free time, I enjoy learning new programming languages and building personal projects.</p>
+        </section>
       </main>
 
       <Footer />
