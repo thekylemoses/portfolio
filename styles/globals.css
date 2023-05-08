@@ -172,3 +172,11 @@ nav a:hover {
     max-width: 60%;
     margin: 0 auto;
     }
+
+    .profile-pic {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    
