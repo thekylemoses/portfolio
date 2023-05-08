@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { Menu } from './menu';
 
 const HomePage = () => {
   return (
@@ -11,13 +12,7 @@ const HomePage = () => {
 
       <header>
         <div className="logo">My Portfolio</div>
-        <nav>
-          <ul>
-            <li><a href="/pages/index.js">Home</a></li>
-            <li><a href="/pages/about.html">About</a></li>
-            <li><a href="/pages/projects.html">Projects</a></li>
-          </ul>
-        </nav>
+        <Menu />
       </header>
 
       <main>
