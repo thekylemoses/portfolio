@@ -10,15 +10,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header title="My Portfolio">
-        <nav>
-          <ul>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </Header>
+      <Header title="My Portfolio" />
 
       <main>
         <section className="hero">
@@ -26,7 +18,7 @@ export default function Home() {
           <p>I am a computer science major and software developer. Here are some of the projects I have worked on:</p>
         </section>
 
-        <section id="projects" className="projects">
+        <section className="projects">
           <h2>Projects</h2>
           <div className="project">
             <h3>Project 1</h3>
@@ -45,25 +37,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="about">
+        <section className="about">
           <h2>About Me</h2>
-          <p>I'm a computer science major at Lewis University, and I'm passionate about software development and technology. In my free time, I enjoy learning new programming languages and building personal projects.</p>
-        </section>
-
-        <section id="contact" className="contact">
-          <h2>Contact Me</h2>
-          <form>
-            <label htmlFor="name">Name:</label>
-            <input type="text" id="name" name="name" />
-
-            <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" />
-
-            <label htmlFor="message">Message:</label>
-            <textarea id="message" name="message"></textarea>
-
-            <button type="submit">Send Message</button>
-          </form>
+          <p>I'm a computer science major at [Your University], and I'm passionate about software development and technology. In my free time, I enjoy learning new programming languages and building personal projects.</p>
         </section>
       </main>
 
