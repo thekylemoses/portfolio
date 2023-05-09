@@ -118,16 +118,10 @@ export default function About() {
             </ul>
         </section>
     </div>
-  </main>
-
-  <footer>
-    <p>
-      Copyright © Your Name
-    </p>
+</main>
+<footer>
+    <p>Copyright © Your Name</p>
   </footer>
-  
 </div>
 );
 }
-
-
