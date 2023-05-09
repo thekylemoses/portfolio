@@ -2,111 +2,146 @@ import Link from 'next/link';
 
 export default function Menu() {
   return (
-    <nav>
-      <ul>
-        <li>
+    <>
+      {/* Horizontal menu for larger screens */}
+      <nav className="desktop-nav">
+        <ul>
+          <li>
+            <span className="initials">KM</span>
+          </li>
+          <li>
+            <Link href="/">
+              <a>Home</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/about">
+              <a>About</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/projects">
+              <a>Projects</a>
+            </Link>
+          </li>
+        </ul>
+      </nav>
+
+      {/* Dropdown menu for mobile */}
+      <nav className="mobile-nav">
+        <input type="checkbox" id="menu-toggle" />
+        <label htmlFor="menu-toggle">
           <span className="initials">KM</span>
-        </li>
-        <li className="menu-toggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul className="dropdown-menu">
-            <li>
-              <Link href="/">
-                <a>Home</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/about">
-                <a>About</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/projects">
-                <a>Projects</a>
-              </Link>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      
+          <span className="icon"></span>
+        </label>
+        <ul>
+          <li>
+            <Link href="/">
+              <a>Home</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/about">
+              <a>About</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/projects">
+              <a>Projects</a>
+            </Link>
+          </li>
+        </ul>
+      </nav>
+
       <style jsx>{`
-        .initials {
-          display: inline-block;
-          padding: 0.2rem 0.5rem;
-          border: 1px solid black;
-        }
-
-        nav ul {
+        /* Common styles */
+        nav {
           display: flex;
-          justify-content: space-between;
           align-items: center;
+        }
+
+        ul {
+          display: flex;
           margin: 0;
           padding: 0;
+          list-style: none;
         }
 
-        .menu-toggle {
-          display: none;
+        li {
+          margin-right: 1rem;
         }
 
-        .menu-toggle input {
-          display: none;
-        }
-
-        .menu-toggle span {
-          display: block;
-          width: 25px;
-          height: 3px;
-          margin-bottom: 5px;
-          position: relative;
-          background: black;
-        }
-
-        .menu-toggle ul {
-          position: absolute;
-          top: 100%;
-          left: 0;
-          display: none;
-          width: 100%;
-          background: white;
-          padding: 0;
-          margin: 0;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .menu-toggle ul li {
-          display: block;
-          margin: 0;
-        }
-
-        .menu-toggle ul a {
-          display: block;
-          padding: 10px;
+        a {
           color: black;
           text-decoration: none;
         }
 
-        @media (max-width: 768px) {
-          .initials {
+        /* Desktop styles */
+        .desktop-nav {
+          display: none;
+        }
+
+        @media (min-width: 768px) {
+          .desktop-nav {
+            display: flex;
+          }
+
+          .mobile-nav {
             display: none;
           }
+        }
 
-          .menu-toggle {
-            display: block;
-          }
+        /* Mobile styles */
+        .mobile-nav {
+          position: relative;
+        }
 
-          .menu-toggle ul {
-            position: static;
-            display: block;
-          }
+        #menu-toggle {
+          display: none;
+        }
 
-          .menu-toggle input:checked + ul {
-            display: block;
-          }
+        label {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+        }
+
+        .icon {
+          display: inline-block;
+          margin-left: 0.5rem;
+          width: 1rem;
+          height: 1rem;
+          border: solid black;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+        }
+
+        #menu-toggle:checked + label .icon {
+          transform: rotate(-135deg);
+        }
+
+        ul {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          margin: 0;
+          padding: 0.5rem;
+          background-color: white;
+          border: 1px solid black;
+        }
+
+        li {
+          margin-right: 0;
+          margin-bottom: 0.5rem;
+        }
+
+        a {
+          display: block;
+          padding: 0.5rem;
+          color: black;
         }
       `}</style>
-    </nav>
+    </>
   );
 }
