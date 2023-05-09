@@ -5,7 +5,7 @@ export default function Menu() {
     <nav>
       <ul>
         <li>
-          <span>KM</span>
+          <span className="initials">KM</span>
         </li>
         <li>
           <Link href="/">
@@ -23,6 +23,14 @@ export default function Menu() {
           </Link>
         </li>
       </ul>
+      
+      <style jsx>{`
+        .initials {
+          display: inline-block;
+          padding: 0.2rem 0.5rem;
+          border: 1px solid black;
+        }
+      `}</style>
     </nav>
   );
 }
