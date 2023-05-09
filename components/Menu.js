@@ -5,7 +5,7 @@ export default function Menu() {
     <nav>
       <ul>
         <li>
-          <span>Kyle\nMoses</span>
+          <span><h3>Kyle Moses</h3></span>
         </li>
         <li>
           <Link href="/">
