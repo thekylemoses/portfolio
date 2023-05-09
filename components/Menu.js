@@ -1,147 +1,160 @@
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Menu() {
-  return (
-    <>
-      {/* Horizontal menu for larger screens */}
-      <nav className="desktop-nav">
-        <ul>
-          <li>
-            <span className="initials">KM</span>
-          </li>
-          <li>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/about">
-              <a>About</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/projects">
-              <a>Projects</a>
-            </Link>
-          </li>
-        </ul>
-      </nav>
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-      {/* Dropdown menu for mobile */}
-      <nav className="mobile-nav">
-        <input type="checkbox" id="menu-toggle" />
-        <label htmlFor="menu-toggle">
-          <span className="initials">KM</span>
-          <span className="icon"></span>
-        </label>
-        <ul>
-          <li>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/about">
-              <a>About</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/projects">
-              <a>Projects</a>
-            </Link>
-          </li>
-        </ul>
-      </nav>
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  return (
+    <nav className="menu">
+      <div className="branding">
+        <span className="initials">KM</span>
+      </div>
+      <button className="dropdown-toggle" onClick={handleDropdownToggle}>
+        <span className="sr-only">Toggle Navigation</span>
+        <span className="hamburger"></span>
+      </button>
+      <ul className={`links ${isDropdownOpen ? 'open' : ''}`}>
+        <li>
+          <Link href="/">
+            <a>Home</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/about">
+            <a>About</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/projects">
+            <a>Projects</a>
+          </Link>
+        </li>
+      </ul>
 
       <style jsx>{`
-        /* Common styles */
-        nav {
+        .menu {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: relative;
+          background-color: #0070f3;
+          color: white;
+          padding: 1rem;
+        }
+
+        .branding {
           display: flex;
           align-items: center;
         }
 
-        ul {
+        .initials {
+          display: inline-block;
+          padding: 0.2rem 0.5rem;
+          border: 1px solid white;
+        }
+
+        .dropdown-toggle {
+          display: none;
+        }
+
+        .links {
           display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          list-style: none;
           margin: 0;
           padding: 0;
-          list-style: none;
         }
 
-        li {
-          margin-right: 1rem;
+        .links li {
+          margin-left: 1rem;
         }
 
-        a {
-          color: black;
+        .links a {
+          color: white;
           text-decoration: none;
         }
 
-        /* Desktop styles */
-        .desktop-nav {
-          display: none;
-        }
-
-        @media (min-width: 768px) {
-          .desktop-nav {
-            display: flex;
+        @media (max-width: 768px) {
+          .dropdown-toggle {
+            display: block;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 2rem;
+            height: 2rem;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 2;
           }
 
-          .mobile-nav {
+          .dropdown-toggle .hamburger {
+            display: block;
+            position: relative;
+            width: 1.5rem;
+            height: 2px;
+            background-color: white;
+            transition: transform 0.3s ease;
+          }
+
+          .dropdown-toggle .hamburger:before,
+          .dropdown-toggle .hamburger:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            transition: transform 0.3s ease;
+          }
+
+          .dropdown-toggle .hamburger:before {
+            top: -0.5rem;
+          }
+
+          .dropdown-toggle .hamburger:after {
+            top: 0.5rem;
+          }
+
+          .dropdown-toggle.open .hamburger {
+            transform:rotate(45deg);
+          }      .dropdown-toggle.open .hamburger:before {
+            transform: rotate(45deg);
+            top: 0;
+          }
+    
+          .dropdown-toggle.open .hamburger:after {
+            transform: rotate(-45deg);
+            top: 0;
+          }
+    
+          .links {
             display: none;
+            position: absolute;
+            top: 4rem;
+            right: 0;
+            width: 100%;
+            background-color: #0070f3;
+            padding: 1rem;
+            box-sizing: border-box;
+            z-index: 1;
           }
-        }
-
-        /* Mobile styles */
-        .mobile-nav {
-          position: relative;
-        }
-
-        #menu-toggle {
-          display: none;
-        }
-
-        label {
-          display: flex;
-          align-items: center;
-          cursor: pointer;
-        }
-
-        .icon {
-          display: inline-block;
-          margin-left: 0.5rem;
-          width: 1rem;
-          height: 1rem;
-          border: solid black;
-          border-width: 0 2px 2px 0;
-          transform: rotate(45deg);
-        }
-
-        #menu-toggle:checked + label .icon {
-          transform: rotate(-135deg);
-        }
-
-        ul {
-          position: absolute;
-          top: 100%;
-          left: 0;
-          width: 100%;
-          margin: 0;
-          padding: 0.5rem;
-          background-color: white;
-          border: 1px solid black;
-        }
-
-        li {
-          margin-right: 0;
-          margin-bottom: 0.5rem;
-        }
-
-        a {
-          display: block;
-          padding: 0.5rem;
-          color: black;
+    
+          .links.open {
+            display: flex;
+            flex-direction: column;
+          }
+    
+          .links li {
+            margin: 1rem 0;
+          }
         }
       `}</style>
-    </>
-  );
-}
+    </nav>
+    );
+  }
