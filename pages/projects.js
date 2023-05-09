@@ -42,7 +42,8 @@ const ProjectsPage = () => {
 
       <main>
         <div className="projects">
-        <h1>My Projects</h1>
+          <u><h1>My Projects</h1></u>
+          <br></br>
           {projects.map(project => (
             <div key={project.id} className="project">
               <h2 className="title">{project.title}</h2>
