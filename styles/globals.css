@@ -24,6 +24,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 4rem; /* Add margin to create space for header */
 }
 
 a {
@@ -145,38 +146,81 @@ nav a:hover {
   font-weight: bold;
   padding: 0.5rem 1rem;
   text-align: center;
+  text-decoration: none;
   transition: background-color 0.2s ease-in-out;
+}
+
+.project a:hover {
+  background-color: #fff;
+  color: #00293c;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #00293c;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 8rem;
   }
 
-  .project a:hover {
-    background-color: #fff;
-    color: #00293c;
-    }
-    
-    /* About Section Styles */
-    .about {
-    background-color: #fff;
-    color: #00293c;
-    padding: 5rem;
-    text-align: center;
-    }
-    
-    .about h2 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    }
-    
-    .about p {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    max-width: 60%;
-    margin: 0 auto;
-    }
+  header .logo {
+    margin-bottom: 1rem;
+  }
 
-    .profile-pic {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-    
+  nav {
+    margin-top: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  main {
+    margin-top: 8rem; /* Add margin to create space for header */
+  }
+
+  .hero {
+    padding: 3rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    max-width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+
+  .projects {
+    padding: 3rem;
+  }
+
+  .project {
+    width: 45%;
+    margin-bottom: 2rem;
+  }
+}
