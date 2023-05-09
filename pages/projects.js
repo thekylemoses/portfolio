@@ -39,12 +39,11 @@ const ProjectsPage = () => {
           <Menu />
         </div>
       </header>
-      <div className="myprojects">
-        <h1>My Projects</h1>
-      </div>
       
-
       <main>
+        <div className="myprojects">
+          <h1>My Projects</h1>
+        </div>
         <div className="projects">
           {projects.map(project => (
             <div key={project.id} className="project">
