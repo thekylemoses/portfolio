@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import Menu from '../components/Menu';
+import Menu from '../components/menu';
 
 export default function About() {
   return (
