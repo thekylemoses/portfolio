@@ -19,11 +19,6 @@ export default function Menu() {
             <a>Projects</a>
           </Link>
         </li>
-        <li>
-          <Link href="/blog">
-            <a>Blog</a>
-          </Link>
-        </li>
       </ul>
     </nav>
   );
