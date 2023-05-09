@@ -39,11 +39,13 @@ const ProjectsPage = () => {
           <Menu />
         </div>
       </header>
+      <div className="myprojects">
+        <h1>My Projects</h1>
+      </div>
+      
 
       <main>
         <div className="projects">
-          <u><h1>My Projects</h1></u>
-          <br></br>
           {projects.map(project => (
             <div key={project.id} className="project">
               <h2 className="title">{project.title}</h2>
@@ -75,6 +77,10 @@ const ProjectsPage = () => {
           border: 1px solid #eaeaea;
           border-radius: 5px;
           box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .myprojects {
+          background-color: white
         }
 
         .title {
