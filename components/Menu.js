@@ -6,7 +6,7 @@ export default function Menu() {
       <ul>
         <li>
           <Link href="/">
-            <a><span>Kyle Moses</span> Home</a>
+            <span>Kyle Moses</span> <a>Home</a>
           </Link>
         </li>
         <li>
