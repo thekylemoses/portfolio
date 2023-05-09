@@ -41,9 +41,8 @@ const ProjectsPage = () => {
       </header>
 
       <main>
-        <h1>My Projects</h1>
-
         <div className="projects">
+        <h1>My Projects</h1>
           {projects.map(project => (
             <div key={project.id} className="project">
               <h2 className="title">{project.title}</h2>
@@ -66,11 +65,6 @@ const ProjectsPage = () => {
           display: flex;
           flex-wrap: wrap;
           justify-content: space-between;
-        }
-
-        .h1 {
-          background-color: white
-          text-decoration: underline;
         }
 
         .project {
