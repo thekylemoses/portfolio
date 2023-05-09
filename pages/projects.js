@@ -91,7 +91,7 @@ const ProjectsPage = () => {
         }
 
         a {
-          color: blue;
+          color: white;
           text-decoration: none;
         }
 
