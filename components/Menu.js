@@ -126,68 +126,50 @@ export default function Menu() {
             height: 100%;
             background-color: white;
             transition: transform 0.3s ease;
-           }
-            .dropdown-toggle .hamburger:before {
-              top: -0.5rem;
+          }
+
+          .dropdown-toggle .hamburger:before {
+            transform: translateY(-6px);
             }
-      
             .dropdown-toggle .hamburger:after {
-              bottom: -0.5rem;
+              transform: translateY(6px);
             }
       
             .open .dropdown-toggle .hamburger {
-              transform: rotate(45deg);
+              transform: rotate(90deg);
             }
       
             .open .dropdown-toggle .hamburger:before {
-              transform: translateY(0.5rem) rotate(-45deg);
+              transform: rotate(45deg) translate(4px, 4px);
             }
       
             .open .dropdown-toggle .hamburger:after {
-              transform: translateY(-0.5rem) rotate(-45deg);
+              transform: rotate(-45deg) translate(4px, -4px);
             }
       
             .links {
-              flex-direction: row;
-              position: static;
-              transform: translateY(0);
-              opacity: 1;
-              background-color: transparent;
-              width: auto;
-              justify-content: flex-end;
-              height: auto;
-              overflow: hidden;
-              margin-top: 1rem;
-              margin-right: 1rem;
+              flex-direction: column;
+              position: absolute;
+              top: 4rem;
+              left: 0;
+              width: 100%;
+              background-color: #0070f3;
+              transform: translateY(-100%);
+              opacity: 0;
+              transition: transform 0.3s ease, opacity 0.3s ease;
+              z-index: 1;
             }
       
             .links li {
-              margin-left: 1rem;
-              margin-bottom: 0;
-            }
-      
-            .links a {
-              font-size: 1.2rem;
+              margin: 1rem 0;
             }
       
             .open .links {
-              flex-direction: column;
-              align-items: flex-end;
-              background-color: #0070f3;
-              width: 100%;
-              height: 100%;
-              overflow: auto;
-              margin-top: 0;
-              margin-right: 0;
-              padding: 1rem;
-              border-radius: 0 0 0.5rem 0.5rem;
-            }
-      
-            .open .links li {
-              margin-bottom: 1rem;
+              transform: translateY(0);
+              opacity: 1;
             }
           }
-          `}</style>
-          </nav>
-          );
-        }
+        `}</style>
+      </nav>
+      );
+    }
