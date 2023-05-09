@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
 
 const HomePage = () => {
   return (
@@ -13,7 +11,13 @@ const HomePage = () => {
 
       <header>
         <div className="logo">My Portfolio</div>
-        <Menu />
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+        </nav>
       </header>
 
       <main>
