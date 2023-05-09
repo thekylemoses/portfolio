@@ -11,9 +11,6 @@ export default function About() {
 
       <header>
         <div>
-          <a href="/">
-            Your Name
-          </a>
           {/* <Menu /> */}
         </div>
       </header>
