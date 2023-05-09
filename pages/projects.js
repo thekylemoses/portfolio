@@ -68,6 +68,11 @@ const ProjectsPage = () => {
           justify-content: space-between;
         }
 
+        .h1 {
+          background-color: white
+          text-decoration: underline;
+        }
+
         .project {
           width: 30%;
           padding: 1rem;
