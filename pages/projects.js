@@ -4,10 +4,10 @@ import Menu from '/components/Menu';
 const projects = [
   {
     id: 1,
-    title: 'Project 1',
-    description: 'This is the description for project 1',
-    productionUrl: 'https://www.example.com/project1',
-    githubUrl: 'https://github.com/username/project1'
+    title: 'This Website :D',
+    description: 'Obviously I wanted to make a portfolio from Scratch to showcase my abilities up front. The source code for it can be found in the GitHub Repo below!',
+    productionUrl: 'https://kylemoses.dev',
+    githubUrl: 'https://github.com/thekylemoses/portfolio'
   },
   {
     id: 2,
