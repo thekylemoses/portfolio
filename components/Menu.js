@@ -5,8 +5,11 @@ export default function Menu() {
     <nav>
       <ul>
         <li>
+          <span>Kyle</span>
+        </li>
+        <li>
           <Link href="/">
-            <span>Kyle Moses</span> <a>Home</a>
+            <a><span>Kyle </span> Home</a>
           </Link>
         </li>
         <li>
