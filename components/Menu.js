@@ -63,20 +63,35 @@ export default function Menu() {
 
         .links {
           display: flex;
-          justify-content: flex-end;
+          flex-direction: column;
+          justify-content: center;
           align-items: center;
           list-style: none;
           margin: 0;
           padding: 0;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background-color: #0070f3;
+          transform: translateY(-100%);
+          opacity: 0;
+          transition: transform 0.3s ease, opacity 0.3s ease;
+          z-index: 1;
         }
 
         .links li {
-          margin-left: 1rem;
+          margin-bottom: 1rem;
         }
 
         .links a {
           color: white;
           text-decoration: none;
+        }
+
+        .open .links {
+          transform: translateY(0);
+          opacity: 1;
         }
 
         @media (max-width: 768px) {
@@ -111,50 +126,68 @@ export default function Menu() {
             height: 100%;
             background-color: white;
             transition: transform 0.3s ease;
+           }
+            .dropdown-toggle .hamburger:before {
+              top: -0.5rem;
+            }
+      
+            .dropdown-toggle .hamburger:after {
+              bottom: -0.5rem;
+            }
+      
+            .open .dropdown-toggle .hamburger {
+              transform: rotate(45deg);
+            }
+      
+            .open .dropdown-toggle .hamburger:before {
+              transform: translateY(0.5rem) rotate(-45deg);
+            }
+      
+            .open .dropdown-toggle .hamburger:after {
+              transform: translateY(-0.5rem) rotate(-45deg);
+            }
+      
+            .links {
+              flex-direction: row;
+              position: static;
+              transform: translateY(0);
+              opacity: 1;
+              background-color: transparent;
+              width: auto;
+              justify-content: flex-end;
+              height: auto;
+              overflow: hidden;
+              margin-top: 1rem;
+              margin-right: 1rem;
+            }
+      
+            .links li {
+              margin-left: 1rem;
+              margin-bottom: 0;
+            }
+      
+            .links a {
+              font-size: 1.2rem;
+            }
+      
+            .open .links {
+              flex-direction: column;
+              align-items: flex-end;
+              background-color: #0070f3;
+              width: 100%;
+              height: 100%;
+              overflow: auto;
+              margin-top: 0;
+              margin-right: 0;
+              padding: 1rem;
+              border-radius: 0 0 0.5rem 0.5rem;
+            }
+      
+            .open .links li {
+              margin-bottom: 1rem;
+            }
           }
-
-          .dropdown-toggle .hamburger:before {
-            top: -0.5rem;
-          }
-
-          .dropdown-toggle .hamburger:after {
-            top: 0.5rem;
-          }
-
-          .dropdown-toggle.open .hamburger {
-            transform:rotate(45deg);
-          }      .dropdown-toggle.open .hamburger:before {
-            transform: rotate(45deg);
-            top: 0;
-          }
-    
-          .dropdown-toggle.open .hamburger:after {
-            transform: rotate(-45deg);
-            top: 0;
-          }
-    
-          .links {
-            display: none;
-            position: absolute;
-            top: 4rem;
-            right: 0;
-            width: 100%;
-            background-color: #0070f3;
-            padding: 1rem;
-            box-sizing: border-box;
-            z-index: 1;
-          }
-    
-          .links.open {
-            display: flex;
-            flex-direction: column;
-          }
-    
-          .links li {
-            margin: 1rem 0;
-          }
+          `}</style>
+          </nav>
+          );
         }
-      `}</style>
-    </nav>
-    );
-  }
