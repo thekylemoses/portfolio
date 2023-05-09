@@ -9,7 +9,6 @@ body {
 
 * {
   box-sizing: border-box;
-  background-color: grey
 }
 
 /* Global Styles */
@@ -17,6 +16,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: grey
 }
 
 main {
