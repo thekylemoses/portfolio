@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Menu from '../components/Menu';
 
 export default function About() {
   return (
@@ -13,19 +14,7 @@ export default function About() {
           <a href="/">
             Your Name
           </a>
-          <nav>
-            <ul>
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/about">About</a>
-              </li>
-              <li>
-                <a href="/projects">Projects</a>
-              </li>
-            </ul>
-          </nav>
+          <Menu />
         </div>
       </header>
 
