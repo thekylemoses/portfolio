@@ -39,12 +39,11 @@ const ProjectsPage = () => {
           <Menu />
         </div>
       </header>
-
-      <div className="myprojects">
-        <h1>My Projects</h1>
-      </div>
-
+      
       <main>
+        <div className="myprojects">
+          <h1>My Projects</h1>
+        </div>
         <div className="projects">
           {projects.map(project => (
             <div key={project.id} className="project">
@@ -80,9 +79,7 @@ const ProjectsPage = () => {
         }
 
         .myprojects {
-          width: 100%;
-          padding: 2rem 0;
-          background-color: white;
+          background-color: white
         }
 
         .title {
@@ -112,3 +109,4 @@ const ProjectsPage = () => {
 };
 
 export default ProjectsPage;
+
