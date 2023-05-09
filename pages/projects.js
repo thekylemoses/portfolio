@@ -76,30 +76,6 @@ const ProjectsPage = () => {
       <footer>
         <p>&copy; 2023 My Portfolio</p>
       </footer>
-
-      <style jsx>{`
-        ul {
-          list-style: none;
-          padding: 0;
-        }
-
-        li {
-          margin-bottom: 2rem;
-        }
-
-        h2 {
-          margin-bottom: 0.5rem;
-        }
-
-        p {
-          margin-bottom: 0.5rem;
-        }
-
-        a {
-          color: blue;
-          text-decoration: underline;
-        }
-      `}</style>
     </div>
   );
 };
