@@ -43,18 +43,18 @@ const ProjectsPage = () => {
       <main>
         <h1>My Projects</h1>
 
-        <ul>
+        <div className="projects">
           {projects.map(project => (
-            <li key={project.id}>
-              <h2>{project.title}</h2>
-              <p>{project.description}</p>
-              <p>
+            <div key={project.id} className="project">
+              <h2 className="title">{project.title}</h2>
+              <p className="description">{project.description}</p>
+              <div className="links">
                 <a href={project.productionUrl} target="_blank" rel="noopener noreferrer">Production</a> | {' '}
                 <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
-              </p>
-            </li>
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
       </main>
 
       <footer>
@@ -62,25 +62,40 @@ const ProjectsPage = () => {
       </footer>
 
       <style jsx>{`
-        ul {
-          list-style: none;
-          padding: 0;
+        .projects {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
         }
 
-        li {
+        .project {
+          width: 30%;
+          padding: 1rem;
           margin-bottom: 2rem;
+          border: 1px solid #eaeaea;
+          border-radius: 5px;
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
         }
 
-        h2 {
+        .title {
           margin-bottom: 0.5rem;
         }
 
-        p {
-          margin-bottom: 0.5rem;
+        .description {
+          margin-bottom: 1rem;
+        }
+
+        .links {
+          display: flex;
+          justify-content: space-between;
         }
 
         a {
           color: blue;
+          text-decoration: none;
+        }
+
+        a:hover {
           text-decoration: underline;
         }
       `}</style>
