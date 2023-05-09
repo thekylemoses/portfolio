@@ -5,7 +5,7 @@ const projects = [
   {
     id: 1,
     title: 'This Website',
-    description: 'This portfolio website was made from scratch to showcase my website development skills. The source code for it can be found in the GitHub Repo below!',
+    description: 'This portfolio website was made from scratch to showcase my website development skills.',
     productionUrl: 'https://kylemoses.dev',
     githubUrl: 'https://github.com/thekylemoses/portfolio'
   },
