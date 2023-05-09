@@ -35,25 +35,9 @@ const ProjectsPage = () => {
       </Head>
 
       <header>
-        <nav>
-          <ul>
-            <li>
-              <Link href="/">
-                <a>Home</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/about">
-                <a>About</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/projects">
-                <a>Projects</a>
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <div>
+          <Menu />
+        </div>
       </header>
 
       <main>
