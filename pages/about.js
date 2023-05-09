@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import Menu from '/components/Menu';
+//import Menu from '/components/Menu';
 
 export default function About() {
   return (
@@ -14,7 +14,7 @@ export default function About() {
           <a href="/">
             Your Name
           </a>
-          <Menu />
+          {/* <Menu /> */}
         </div>
       </header>
 
@@ -116,8 +116,8 @@ export default function About() {
                 <p>Description of volunteer work and any notable accomplishments</p>
                 </li>
             </ul>
-        </section>
-    </div>
+            </section>
+        </div>
 </main>
 <footer>
     <p>Copyright © Your Name</p>
