@@ -8,9 +8,9 @@ export default function About() {
         <title>About Me</title>
       </Head>
 
-      <header className={styles.header}>
-        <div className={styles.container}>
-          <a href="/" className={styles.logo}>
+      <header>
+        <div>
+          <a href="/">
             Your Name
           </a>
           <nav>
@@ -30,7 +30,7 @@ export default function About() {
       </header>
 
       <main>
-        <div className={styles.container}>
+        <div>
           <section>
             <h1>Education</h1>
             <ul>
@@ -107,44 +107,38 @@ export default function About() {
                   src="/sport-or-club-image.jpg"
                   alt="Sport or Club Name"
                   width={300}
-                  height={200}            />
-                  </li>
-                </ul>
-              </section>
-        
-              <section>
-                <h1>Volunteer Experience</h1>
-                <ul>
-                  <li>
-                    <h2>Organization Name</h2>
-                    <p>Role, Dates</p>
-                    <p>Description of volunteer work and any notable accomplishments</p>
-                  </li>
-                  <li>
-                    <h2>Organization Name</h2>
-                    <p>Role, Dates</p>
-                    <p>Description of volunteer work and any notable accomplishments</p>
-                  </li>
-                </ul>
-              </section>
-        
-              <section>
-                <h1>Work Experience</h1>
-                <ul>
-                  <li>
-                    <h2>Company Name</h2>
-                    <p>Position, Dates</p>
-                    <p>Description of work and any notable accomplishments</p>
-                  </li>
-                  <li>
-                    <h2>Company Name</h2>
-                    <p>Position, Dates</p>
-                    <p>Description of work and any notable accomplishments</p>
-                  </li>
-                </ul>
-              </section>
-            </div>
-          </main>
-        </div>
-        );
-      }
+                  height={200}
+                />
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h1>Volunteer Experience</h1>
+            <ul>
+              <li>
+                <h2>Organization Name</h2>
+                <p>Role, Dates</p>
+                <p>Description of volunteer work and any notable accomplishments</p>
+              </li>
+              <li>
+                <h2>Organization Name</h2>
+                <p>Role, Dates</p>
+                <p>Description of volunteer work and any notable accomplishments</p>
+                </li>
+            </ul>
+        </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      Copyright © Your Name
+    </p>
+  </footer>
+  
+</div>
+);
+}
+
+
