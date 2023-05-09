@@ -16,7 +16,7 @@ export default function About() {
       </header>
 
       <main>
-        <div>
+        <div style={{ backgroundColor: 'white', padding: '1rem' }}>
           <section>
             <h1>Education</h1>
             <ul>
@@ -44,7 +44,9 @@ export default function About() {
               </li>
             </ul>
           </section>
+        </div>
 
+        <div style={{ backgroundColor: 'white', padding: '1rem' }}>
           <section>
             <h1>Online Certifications</h1>
             <ul>
@@ -72,7 +74,9 @@ export default function About() {
               </li>
             </ul>
           </section>
+        </div>
 
+        <div style={{ backgroundColor: 'white', padding: '1rem' }}>
           <section>
             <h1>Sports and Clubs</h1>
             <ul>
@@ -98,7 +102,9 @@ export default function About() {
               </li>
             </ul>
           </section>
+        </div>
 
+        <div style={{ backgroundColor: 'white', padding: '1rem' }}>
           <section>
             <h1>Volunteer Experience</h1>
             <ul>
@@ -106,19 +112,16 @@ export default function About() {
                 <h2>Organization Name</h2>
                 <p>Role, Dates</p>
                 <p>Description of volunteer work and any notable accomplishments</p>
-              </li>
+                </li>
               <li>
                 <h2>Organization Name</h2>
                 <p>Role, Dates</p>
                 <p>Description of volunteer work and any notable accomplishments</p>
-                </li>
+              </li>
             </ul>
-            </section>
+          </section>
         </div>
-</main>
-<footer>
-    <p>Copyright © 2023 Kyle Moses</p>
-  </footer>
+        </main>
 </div>
 );
 }
