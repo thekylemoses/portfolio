@@ -1,4 +1,6 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import Image from 'next/image';
+import Menu from '/components/Menu';
 
 const HomePage = () => {
   return (
@@ -10,19 +12,16 @@ const HomePage = () => {
       </Head>
 
       <header>
-        <div className="logo">My Portfolio</div>
-        <nav>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/about">About</a></li>
-          </ul>
-        </nav>
+        <div>
+          <Menu />
+        </div>
       </header>
 
       <main>
         <div className="hero">
-          <img src="/images/profile-picture.png" alt="My Profile Picture" className="profile-picture" />
+          <div className="profile-picture">
+            <Image src="/images/profile-picture.png" alt="My Profile Picture" width={200} height={200} />
+          </div>
           <h1>Welcome to my portfolio!</h1>
           <p>Here you can find information about me and my projects.</p>
           <a href="/projects">View Projects</a>
@@ -32,6 +31,14 @@ const HomePage = () => {
       <footer>
         <p>&copy; 2023 My Portfolio</p>
       </footer>
+
+      <style jsx>{`
+        .profile-picture {
+          border-radius: 50%;
+          overflow: hidden;
+          margin-bottom: 2rem;
+        }
+      `}</style>
     </div>
   )
 }
