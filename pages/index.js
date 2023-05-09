@@ -29,7 +29,7 @@ const HomePage = () => {
       </main>
 
       <footer>
-        <p>&copy; 2023 My Portfolio</p>
+        <p>Copyright © 2023 Kyle Moses</p>
       </footer>
 
       <style jsx>{`

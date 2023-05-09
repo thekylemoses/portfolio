@@ -39,11 +39,12 @@ const ProjectsPage = () => {
           <Menu />
         </div>
       </header>
-      
+
+      <div className="myprojects">
+        <h1>My Projects</h1>
+      </div>
+
       <main>
-        <div className="myprojects">
-          <h1>My Projects</h1>
-        </div>
         <div className="projects">
           {projects.map(project => (
             <div key={project.id} className="project">
@@ -59,7 +60,7 @@ const ProjectsPage = () => {
       </main>
 
       <footer>
-        <p>&copy; 2023 My Portfolio</p>
+        <p>Copyright © 2023 Kyle Moses</p>
       </footer>
 
       <style jsx>{`
@@ -79,7 +80,9 @@ const ProjectsPage = () => {
         }
 
         .myprojects {
-          background-color: white
+          width: 100%;
+          padding: 2rem 0;
+          background-color: white;
         }
 
         .title {

@@ -117,7 +117,7 @@ export default function About() {
         </div>
 </main>
 <footer>
-    <p>Copyright © Your Name</p>
+    <p>Copyright © 2023 Kyle Moses</p>
   </footer>
 </div>
 );
