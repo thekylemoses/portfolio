@@ -118,14 +118,14 @@ export default function About() {
               <li>
                 <h2>Water Polo and Swim Teams</h2>
                 <p>
-                  Competed as a member of the Water Polo and Swim Teams for Lockport Township High School all four years...
+                    Competed as a member of the Water Polo and Swim Teams for Lockport Township High School all four years. I played at the Junior Varsity level for 2 years and the Varsity level for 2 years. I was voted in as captain of the Varsity squad my senior year for water polo. Both years I was on the Varsity squad we were one of the top ranked teams in the state. In 2018, we had the best regular season record in our school history (27-5). I learned many life lessons playing these sports such as discipline, respect, and loyalty.
                 </p>
                 {/* Add image for Water Polo and Swim Teams */}
               </li>
               <li>
                 <h2>Lewis University Call of Duty Team</h2>
                 <p>
-                  Served as Captain of the Call of Duty Team for all 4 years...
+                  Served as Captain of the Call of Duty Team for all 4 years. Participated in several Collegiate level leagues such as the College CoD League (CCL), Tespa, and NACE. We were a successful small collegiate team despite competing against universities with substantially more resources.
                 </p>
                 {/* Add image for Lewis University Call of Duty Team */}
               </li>
