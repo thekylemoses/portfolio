@@ -25,8 +25,8 @@ export default function About() {
                 <p>Degree Program, Graduation Year</p>
                 <p>Description of program and any notable accomplishments</p>
                 <Image
-                  src="/college-image.jpg"
-                  alt="College Name"
+                  src="/imgs/college-image.png"
+                  alt="Lewis University"
                   width={300}
                   height={200}
                 />
@@ -36,8 +36,8 @@ export default function About() {
                 <p>Graduation Year</p>
                 <p>Description of program and any notable accomplishments</p>
                 <Image
-                  src="/high-school-image.jpg"
-                  alt="High School Name"
+                  src="/imgs/high-school-image.jpg"
+                  alt="Lockport Township High School"
                   width={300}
                   height={200}
                 />
