@@ -4,7 +4,7 @@ import Menu from '/components/Menu';
 
 export default function About() {
   return (
-    <div>
+    <div style={{ textAlign: 'center' }}>
       <Head>
         <title>About Me</title>
       </Head>
@@ -15,7 +15,7 @@ export default function About() {
         </div>
       </header>
 
-      <main style={{ backgroundColor: 'white', padding: '1rem' }}>
+      <main style={{ backgroundColor: 'white', padding: '1rem', textAlign: 'left' }}>
         <section>
           <h1>About Me</h1>
           <p>
@@ -25,7 +25,7 @@ export default function About() {
 
         <section>
           <h1>Education</h1>
-          <ul>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
             <li>
               <h2>Lewis University</h2>
               <p>Bachelor of Science in Computer Science, May 2023</p>
@@ -55,8 +55,8 @@ export default function About() {
 
         <section>
           <h1>Online Certifications</h1>
-          <ul>
-            <li>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+            <li style={{ margin: '0 auto' }}>
               <h2>ServSafe Certification</h2>
               <p>ServSafe Certified, August 2023 to August 2028</p>
               <Image
@@ -66,7 +66,7 @@ export default function About() {
                 height={200}
               />
             </li>
-            <li>
+            <li style={{ margin: '0 auto' }}>
               <h2>American Red Cross Lifeguard Certificate</h2>
               <p>Lifeguard Certified, December 2018 to December 2020</p>
               <Image
@@ -75,16 +75,17 @@ export default function About() {
                 width={300}
                 height={200}
               />
-            </li>          </ul>
+            </li>
+          </ul>
         </section>
 
         <section>
           <h1>Clubs and Sports</h1>
-          <ul>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
             <li>
               <h2>Water Polo and Swim Teams</h2>
               <p>
-                Competed as a member of the Water Polo and Swim Teams for Lockport Township High School all four years. I played at the Junior Varsity level for 2 years and the Varsity level for 2 years. I was voted in as captain of the Varsity squad my senior year for water polo. Both years I was on the Varsity squad we were one of the top ranked teams in the state. In 2018, we had the best regular season record in our school history (27-5). I learned many life lessons playing these sports such as discipline, respect, and loyalty.
+                Competed as a member of the Water Polo and Swim Teams for Lockport Township High School all four years. I played at the Junior Varsity level for 2 years and the Varsity level for 2 years. I was voted in as captain of the Varsity squad my senior year for water polo. Both years I was on the Varsity squad we were one of the top-ranked teams in the state. In 2018, we had the best regular season record in our school history (27-5). I learned many life lessons playing these sports such as discipline, respect, and loyalty.
               </p>
               {/* Add image for Water Polo and Swim Teams */}
             </li>
