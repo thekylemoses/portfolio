@@ -20,7 +20,7 @@ const HomePage = () => {
       <main>
         <div className="hero">
           <div className="profile-picture">
-            <Image src="pages/imgs/profile-picture.jpeg" alt="My Profile Picture"  />
+            <img src="/imgs/profile-picture.jpeg" alt="My Profile Picture"  />
           </div>
           <h1>Welcome to my portfolio!</h1>
           <p>Here you can find information about me and my projects.(Note: this site is not mobile safe yet)</p>
