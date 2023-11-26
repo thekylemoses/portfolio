@@ -15,7 +15,7 @@ export default function About() {
         </div>
       </header>
 
-      <main style={{ backgroundColor: 'white', padding: '1rem', textAlign: 'center' }}>
+      <main style={{ backgroundColor: 'white', padding: '1rem', textAlign: 'left' }}>
         <section>
           <h1>About Me</h1>
           <p>
@@ -28,7 +28,8 @@ export default function About() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             <li>
               <h2>Lewis University</h2>
-              <p>Bachelor of Science in Computer Science, May 2023</p>
+              <h3>Bachelor of Science in Computer Science</h3>
+              <p>Graduated: May 2023</p>
               <p>
                 Proficient in HTML, CSS, Python, Java, and C, demonstrating a strong aptitude for programming languages. Dedicated and hardworking, consistently striving to deliver exceptional results.
               </p>
@@ -41,7 +42,8 @@ export default function About() {
             </li>
             <li>
               <h2>Lockport Township High School</h2>
-              <p>High School Diploma, June 2019</p>
+              <h3>High School Diploma</h3>
+              <p>Graduated: June 2019</p>
               <p>Description of program and any notable accomplishments</p>
               <Image
                 src="/imgs/high-school-image.jpg"
@@ -58,7 +60,8 @@ export default function About() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             <li style={{ margin: '0 auto' }}>
               <h2>ServSafe Certification</h2>
-              <p>ServSafe Certified, August 2023 to August 2028</p>
+              <h3>ServSafe Certified</h3>
+              <p>August 2023 to August 2028</p>
               <Image
                 src="/certification-image.jpg"
                 alt="ServSafe Certification"
@@ -68,7 +71,8 @@ export default function About() {
             </li>
             <li style={{ margin: '0 auto' }}>
               <h2>American Red Cross Lifeguard Certificate</h2>
-              <p>Lifeguard Certified, December 2018 to December 2020</p>
+              <h3>Lifeguard Certified</h3>
+              <p>December 2018 to December 2020</p>
               <Image
                 src="/certification-image.jpg"
                 alt="Lifeguard Certification"
@@ -84,6 +88,7 @@ export default function About() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             <li>
               <h2>Water Polo and Swim Teams</h2>
+              <h3>Lockport Township High School</h3>
               <p>
                 Competed as a member of the Water Polo and Swim Teams for Lockport Township High School all four years. I played at the Junior Varsity level for 2 years and the Varsity level for 2 years. I was voted in as captain of the Varsity squad my senior year for water polo. Both years I was on the Varsity squad we were one of the top-ranked teams in the state. In 2018, we had the best regular season record in our school history (27-5). I learned many life lessons playing these sports such as discipline, respect, and loyalty.
               </p>
@@ -91,6 +96,7 @@ export default function About() {
             </li>
             <li>
               <h2>Lewis University Call of Duty Team</h2>
+              <h3>Team Captain</h3>
               <p>
                 Served as Captain of the Call of Duty Team for all 4 years. Participated in several Collegiate level leagues such as the College CoD League (CCL), Tespa, and NACE. We were a successful small collegiate team despite competing against universities with substantially more resources.
               </p>
