@@ -58,7 +58,7 @@ export default function About() {
         <section>
           <h1>Online Certifications</h1>
           <ul style={{ listStyle: 'none', padding: 0 }}>
-            <li style={{ margin: '0 auto' }}>
+            <li>
               <h2>ServSafe Certification</h2>
               <h3>ServSafe Certified</h3>
               <p>August 2023 to August 2028</p>
@@ -69,7 +69,7 @@ export default function About() {
                 height={200}
               />
             </li>
-            <li style={{ margin: '0 auto' }}>
+            <li>
               <h2>American Red Cross Lifeguard Certificate</h2>
               <h3>Lifeguard Certified</h3>
               <p>December 2018 to December 2020</p>
