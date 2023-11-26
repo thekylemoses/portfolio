@@ -4,7 +4,7 @@ import Menu from '/components/Menu';
 
 export default function About() {
   return (
-    <div style={{ textAlign: 'center' }}>
+    <div>
       <Head>
         <title>About Me</title>
       </Head>
@@ -15,7 +15,7 @@ export default function About() {
         </div>
       </header>
 
-      <main style={{ backgroundColor: 'white', padding: '1rem', textAlign: 'left' }}>
+      <main style={{ backgroundColor: 'white', padding: '1rem', textAlign: 'center' }}>
         <section>
           <h1>About Me</h1>
           <p>
@@ -103,4 +103,3 @@ export default function About() {
     </div>
   );
 }
-
